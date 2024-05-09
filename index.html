@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        input[type="date"] {
+            width: 15em;
+            height: 5vh;
+        }
+        input[type="submit"]{
+            width: 8vw;
+            height: 6vh;
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 10px black;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 1.5em;
+            transition: 1s;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(231, 229, 229);
+        }
+
+        form,
+        h2,
+        p {
+            text-align: center;
+        }
+
+        form {
+            height: 47vh;
+            border: 1px solid gray;
+            box-shadow: 0 0 10px black;
+        }
+
+        .mainContainer{
+            /* border: 1px solid black; */
+            width: 30em;
+            height: 70vh;
+            margin: 0 auto;
+        }
+        .result #Years , #Months, #Days, #Hours, #Minutes{
+            font-size: 2.3em;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mainContainer">
+        <h2>Age Calculator</h2>
+        <!-- a libraray for getting time aand every thing related with time -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script> -->
+
+        <form onsubmit="ageCalculator(); return false;">
+
+            <p>
+                <label for="userBirthDate">Date of Birth :</label>
+                <input type="date" id="userBirthDate">
+            </p>
+            <br>
+            <p>
+                <input type="submit" value="Calculate">
+            </p>
+        </form>
+
+        <p class="result">
+            Years :<span id="Years">0</span> Months : <span id="Months">0</span>
+            Days : <span id="Days">0</span> Hours : <span id="Hours">0</span>
+            Minutes : <span id="Minutes">0</span>
+        </p>
+    </div>
+
+
+
+
+    <script src="./JS/app.js"></script>
+</body>
+
+</html>
